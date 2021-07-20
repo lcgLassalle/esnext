@@ -80,3 +80,11 @@ console.log(defaultTrip.toString())
 /**
  * Héritage
  */
+class FreeTrip extends Trip {
+    constructor(id, name, imageUrl){
+    super(id, name, imageUrl);
+    this.price = 0;
+}
+}
+let testFreeTrip = new FreeTrip("nantes","Nantes", "img/nantes.jpg");
+console.log(testFreeTrip.toString());
