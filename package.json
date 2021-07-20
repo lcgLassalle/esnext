@@ -1,0 +1,16 @@
+{
+    "name": "esnext",
+    "version": "1.0.0",
+    "description": "projet TP1",
+    "main": "index.js",
+    "scripts": {
+        "start": "node app.js",
+      "test": "echo \"Error:no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Louise Lassalle",
+    "license": "ISC",
+    "dependencies": {
+      "json-server": "^0.16.3"
+    }
+  }
