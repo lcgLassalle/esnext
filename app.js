@@ -88,3 +88,53 @@ class FreeTrip extends Trip {
 }
 let testFreeTrip = new FreeTrip("nantes","Nantes", "img/nantes.jpg");
 console.log(testFreeTrip.toString());
+/**
+ * Promises
+ */
+
+ class TripService {
+    constructor() {
+    let trip1 = new Trip('paris', 'Paris', 'img/paris.jpg');
+    let trip2 = new Trip('nantes', 'Nantes', 'img/nantes.jpg');
+    let trip3 = new Trip('rio-de-janeiro', 'Rio de Janeiro', 'img/rio-de-janeiro.jpg');
+    /**
+     * creation d'un set de trip dans le constructeur
+     */
+    let setTrip = new Set();
+    setTrip.add(trip1);
+    setTrip.add(trip2);
+    setTrip.add(trip3);
+    }
+
+    findByName(tripName) {
+    return new Promise((resolve, reject) => {
+    setTimeout( () => {
+    // ici l'exécution du code est asynchrone
+    // TODO utiliser resolve et reject en fonction du résultat de la
+    //recherche
+    }, 2000)
+    });
+    }
+    }
+
+    class PriceService {
+    constructor() {
+    // TODO Map of 2 trips
+    // 'paris' --> price == 100
+    // 'rio-de-janeiro' --> price == 800)
+    // no price for 'nantes'
+    let mapTrip = new Map();
+    mapTrip.set('paris', 100);
+    mapTrip.set('rio-de-janeiro', 1000);
+    }
+
+    findPriceByTripId(tripId) {
+    return new Promise((resolve, reject) => {
+    setTimeout( () => {
+    // ici l'exécution du code est asynchrone
+    // TODO utiliser resolve et reject en fonction du résultat de
+    //la recherche
+    }, 2000)
+    });
+    }
+    }
